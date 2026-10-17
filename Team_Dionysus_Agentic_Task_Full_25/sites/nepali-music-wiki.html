@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Narayan Gopal - SwarSansar | The Nepali Music Wiki</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #f6f5f2; color: #202122; }
+  a { color: #0645ad; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Top bar */
+  .site-header { background: #1f2a44; color: #fff; display: flex; align-items: center; padding: 10px 28px; gap: 24px; border-bottom: 4px solid #c8a24b; }
+  .logo { font-size: 22px; font-weight: bold; letter-spacing: .5px; }
+  .logo span { color: #c8a24b; }
+  .tagline { font-size: 12px; color: #b9c2d8; font-family: Arial, sans-serif; }
+  .search { margin-left: auto; }
+  .search input { width: 320px; padding: 7px 12px; border: none; border-radius: 3px; font-size: 13px; font-family: Arial, sans-serif; }
+  .search button { padding: 7px 14px; margin-left: 6px; border: none; border-radius: 3px; background: #c8a24b; color: #1f2a44; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; }
+  .nav-strip { background: #2c3a5c; padding: 8px 28px; display: flex; gap: 22px; font-family: Arial, sans-serif; font-size: 13px; }
+  .nav-strip a { color: #d7ddeb; }
+  .nav-strip a.active { color: #fff; font-weight: bold; border-bottom: 2px solid #c8a24b; padding-bottom: 2px; }
+
+  .layout { display: flex; max-width: 1280px; margin: 24px auto; gap: 24px; padding: 0 20px; }
+  .sidebar { width: 230px; flex-shrink: 0; }
+  .panel { background: #fff; border: 1px solid #d8d5cd; margin-bottom: 18px; }
+  .panel h3 { background: #eef1f6; border-bottom: 1px solid #d8d5cd; font-size: 13px; padding: 8px 12px; font-family: Arial, sans-serif; color: #1f2a44; }
+  .panel ul { list-style: none; padding: 8px 12px 10px; }
+  .panel li { font-size: 13px; padding: 4px 0; border-bottom: 1px dotted #e4e1d8; font-family: Arial, sans-serif; }
+  .panel li:last-child { border-bottom: none; }
+
+  /* Article */
+  .article { flex: 1; background: #fff; border: 1px solid #d8d5cd; padding: 30px 38px; }
+  .breadcrumb { font-family: Arial, sans-serif; font-size: 12px; color: #777; margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: normal; border-bottom: 1px solid #a2a9b1; padding-bottom: 6px; margin-bottom: 4px; font-family: Georgia, serif; }
+  .from-note { font-size: 12px; color: #777; font-family: Arial, sans-serif; margin-bottom: 16px; }
+  .content { font-size: 15px; line-height: 1.65; }
+  .content p { margin-bottom: 12px; text-align: justify; }
+  .lead-first::first-letter { font-size: 200%; font-weight: bold; color: #1f2a44; }
+
+  /* Infobox */
+  .infobox { float: right; width: 300px; margin: 0 0 16px 24px; background: #f8f6f1; border: 1px solid #c8a24b; font-size: 12.5px; font-family: Arial, sans-serif; }
+  .infobox .ib-title { background: #1f2a44; color: #fff; text-align: center; padding: 8px; font-size: 14.5px; font-weight: bold; }
+  .infobox .ib-image { background: linear-gradient(160deg,#2c3a5c 0%, #46557e 55%, #8a7340 100%); height: 150px; position: relative; }
+  .infobox .ib-image svg { position: absolute; inset: 0; margin: auto; }
+  .infobox .ib-caption { font-size: 11px; color: #666; text-align: center; padding: 5px 8px; background: #fff; border-bottom: 1px solid #e2ddcf; }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox th { text-align: left; vertical-align: top; padding: 6px 10px; width: 88px; color: #1f2a44; font-weight: bold; border-top: 1px solid #e2ddcf; }
+  .infobox td { padding: 6px 10px; border-top: 1px solid #e2ddcf; }
+
+  /* TOC */
+  .toc-box { display: inline-block; border: 1px solid #c8ccd1; background: #f8f9fa; padding: 12px 22px 12px 16px; font-size: 13px; font-family: Arial, sans-serif; margin-bottom: 16px; }
+  .toc-box .toc-title { font-weight: bold; text-align: center; margin-bottom: 6px; }
+  .toc-box ol { margin-left: 18px; }
+  .toc-box li { padding: 2px 0; }
+
+  h2 { font-size: 21px; border-bottom: 1px solid #a2a9b1; padding-bottom: 3px; margin: 22px 0 10px; font-weight: normal; }
+  h3 { font-size: 16px; margin: 16px 0 8px; }
+  ul.songs { margin: 0 0 12px 22px; }
+  ul.songs li { padding: 3px 0; }
+  table.songtable { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 13px; margin: 10px 0 16px; }
+  table.songtable th { background: #eef1f6; border: 1px solid #c8ccd1; padding: 6px 10px; text-align: left; }
+  table.songtable td { border: 1px solid #d8d5cd; padding: 6px 10px; }
+  .cat-footer { clear: both; margin-top: 26px; border: 1px solid #d8d5cd; background: #f8f9fa; padding: 10px 14px; font-size: 12.5px; font-family: Arial, sans-serif; }
+  .page-footer { text-align: center; font-size: 12px; color: #888; font-family: Arial, sans-serif; padding: 20px 0 30px; }
+  blockquote { border-left: 3px solid #c8a24b; margin: 10px 0 14px; padding: 6px 14px; background: #faf8f3; font-style: italic; color: #444; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Swar<span>Sansar</span></div>
+  <div class="tagline">The Nepali Music Wiki — 4,812 articles on artists, songs &amp; genres</div>
+  <div class="search">
+    <input type="text" placeholder="Search SwarSansar...">
+    <button>Search</button>
+  </div>
+</header>
+<nav class="nav-strip">
+  <a href="#" class="active">Featured Artist</a>
+  <a href="#">Artists A–Z</a>
+  <a href="#">Genres</a>
+  <a href="#">Decades</a>
+  <a href="#">Playlists</a>
+  <a href="#">Community Portal</a>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="panel">
+      <h3>Featured Artists</h3>
+      <ul>
+        <li><a href="#"><b>Narayan Gopal</b></a></li>
+        <li><a href="#">Aruna Lama</a></li>
+        <li><a href="#">Melina Rai</a></li>
+        <li><a href="#">Rajesh Payal Rai</a></li>
+        <li><a href="#">Bipul Chettri</a></li>
+        <li><a href="#">Sajjan Raj Vaidya</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Genres</h3>
+      <ul>
+        <li><a href="#">Adhunik Geet</a></li>
+        <li><a href="#">Lok Dohori</a></li>
+        <li><a href="#">Nepali Pop</a></li>
+        <li><a href="#">Nepali Rock</a></li>
+        <li><a href="#">Gajal</a></li>
+        <li><a href="#">Newar Music</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>On This Wiki</h3>
+      <ul>
+        <li>4,812 articles</li>
+        <li>926 audio reviews</li>
+        <li>57 active editors</li>
+        <li><a href="#">How to contribute</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="article">
+    <div class="breadcrumb">SwarSansar &rsaquo; Artists &rsaquo; Adhunik Geet &rsaquo; <b>Narayan Gopal</b></div>
+    <h1>Narayan Gopal</h1>
+    <div class="from-note">Last edited 2 days ago by <a href="#">EditorSagar</a> &middot; Featured article</div>
+
+    <aside class="infobox">
+      <div class="ib-title">Narayan Gopal</div>
+      <div class="ib-image">
+        <svg width="120" height="110" viewBox="0 0 120 110">
+          <circle cx="60" cy="38" r="20" fill="#f0e6cf"/>
+          <rect x="30" y="62" width="60" height="40" rx="8" fill="#1a2440"/>
+          <path d="M45 20 q15 -14 30 0" stroke="#c8a24b" stroke-width="3" fill="none"/>
+          <text x="60" y="102" font-size="9" fill="#c8a24b" text-anchor="middle" font-family="Arial">SWOR SAMRAT 1939–1990</text>
+        </svg>
+      </div>
+      <div class="ib-caption">Memorial portrait card issued by SwarSansar editors</div>
+      <table>
+        <tr><th>Born</th><td>4 October 1939, Kathmandu, Nepal</td></tr>
+        <tr><th>Died</th><td>5 December 1990 (aged 51), Kathmandu</td></tr>
+        <tr><th>Honour</th><td>Swor Samrat ("Emperor of Voice")</td></tr>
+        <tr><th>Genres</th><td>Adhunik Geet, Gajal, film songs</td></tr>
+        <tr><th>Occupation</th><td>Singer, composer</td></tr>
+        <tr><th>Years active</th><td>1958–1990</td></tr>
+        <tr><th>Language</th><td>Nepali</td></tr>
+      </table>
+    </aside>
+
+    <div class="content">
+      <p class="lead-first">Narayan Gopal Gurung (4 October 1939 – 5 December 1990), honorifically titled <b>Swor Samrat</b> (Nepali for "Emperor of Voice"), is widely regarded as the most influential singer in the history of Nepali music. His deep, emotive baritone and his sensitivity to poetry shaped the modern Adhunik Geet tradition, and more than three decades after his death his songs remain fixtures of Nepali radio, concerts and family gatherings.</p>
+      <p>Born into a Newar family in Kathmandu, Narayan Gopal grew up in a household that valued literature as much as music. He studied classical music formally and began performing on Radio Nepal in the late 1950s, at a time when the recording industry barely existed. Across a career of roughly three decades he recorded hundreds of songs, many of them set to the verses of leading Nepali poets, and he also worked as a music director for stage and film.</p>
+
+      <div class="toc-box">
+        <div class="toc-title">Contents</div>
+        <ol>
+          <li><a href="#">Early life and training</a></li>
+          <li><a href="#">Musical style</a></li>
+          <li><a href="#">Signature songs</a></li>
+          <li><a href="#">Legacy and honours</a></li>
+          <li><a href="#">See also</a></li>
+        </ol>
+      </div>
+
+      <h2>Early life and training</h2>
+      <p>Narayan Gopal received his early schooling in Kathmandu and showed an interest in both music and literature from his student days. He pursued formal training in Hindustani classical vocal music, first in India and later supplemented by further study abroad, which gave his singing a discipline that set him apart from his contemporaries. His first broadcasts on Radio Nepal quickly earned him a following, and by the 1960s he had become one of the station's most requested voices.</p>
+
+      <h2>Musical style</h2>
+      <p>Critics usually describe Narayan Gopal's style as a fusion of rigorous classical technique with an actor's instinct for drama. He preferred poetry with emotional weight — themes of separation, memory, patriotism and unfulfilled love — and he was known for dwelling on a single syllable until the meaning of the line opened up. His collaboration with lyricists and composers of his era produced songs that are now treated as standards taught to new singers.</p>
+      <blockquote>"He did not simply sing the words; he made the whole country feel them. Every Nepali household carries at least one of his songs in its memory."</blockquote>
+
+      <h2>Signature songs</h2>
+      <p>The following table lists songs that fan editors of this wiki consistently rank among his essential recordings:</p>
+      <table class="songtable">
+        <tr><th>Song</th><th>Theme</th><th>Notable line (translated)</th></tr>
+        <tr><td>E Kancha Thunga Kancha</td><td>Youthful longing</td><td>"O slender young one, do not lean on that young bamboo..."</td></tr>
+        <tr><td>Yo Samjhine Man Cha</td><td>Memory &amp; devotion</td><td>"This heart keeps remembering..."</td></tr>
+        <tr><td>Kehi Mitho Baat Gara</td><td>Tenderness</td><td>"Say something sweet, even if untrue..."</td></tr>
+        <tr><td>Luki Luki Jau Ki Baru</td><td>Shy affection</td><td>"Will you slip away hiding, or shall I follow openly?"</td></tr>
+        <tr><td>Aina Jhyal</td><td>Reflection</td><td>"The mirror-window of memory..."</td></tr>
+      </table>
+
+      <h2>Legacy and honours</h2>
+      <p>Narayan Gopal died in December 1990 at the age of 51, but his stature has only grown since. Tributes and cover competitions are held on his birth and death anniversaries, a commemorative stamp has been issued in his honour, and his recordings continue to top "greatest Nepali song" polls run by FM stations. For learners of Adhunik Geet, imitating his phrasing remains a rite of passage.</p>
+
+      <h2>See also</h2>
+      <ul class="songs">
+        <li><a href="#">Aruna Lama</a> — the "Nightingale of the Hills"</li>
+        <li><a href="#">Adhunik Geet</a> — the modern-song tradition he defined</li>
+        <li><a href="#">History of Radio Nepal</a></li>
+      </ul>
+
+      <div class="cat-footer"><b>Categories:</b> <a href="#">Nepali singers</a> | <a href="#">Adhunik Geet</a> | <a href="#">People from Kathmandu</a> | <a href="#">1939 births</a> | <a href="#">1990 deaths</a> | <a href="#">Featured articles</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="page-footer">SwarSansar — The Nepali Music Wiki &middot; Content available under the wiki community licence &middot; Page views this month: 41,209</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pashupatinath Temple - Dharohar Archives | Kathmandu Valley Heritage Wiki</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #f4efe6; color: #2e2620; }
+  a { color: #8a5a12; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header { background: #3e1f14; color: #f3e6cf; display: flex; align-items: center; padding: 13px 30px; gap: 24px; border-bottom: 4px solid #b98a2f; }
+  .logo { font-size: 22px; font-weight: bold; }
+  .logo span { color: #d9b45c; }
+  .tagline { font-size: 12px; color: #c8b090; font-family: Arial, sans-serif; }
+  .search { margin-left: auto; }
+  .search input { width: 300px; padding: 8px 14px; border: none; border-radius: 3px; font-size: 13px; font-family: Arial, sans-serif; }
+  .nav-strip { background: #55291a; padding: 9px 30px; display: flex; gap: 22px; font-size: 13px; font-family: Arial, sans-serif; }
+  .nav-strip a { color: #e4cfa9; font-weight: 600; }
+  .nav-strip a.active { color: #fff; border-bottom: 3px solid #d9b45c; padding-bottom: 3px; }
+
+  .layout { display: flex; max-width: 1260px; margin: 26px auto; gap: 26px; padding: 0 20px; }
+  .maincol { flex: 1; }
+  .sidebar { width: 250px; flex-shrink: 0; }
+
+  .breadcrumb { font-size: 12.5px; color: #93826d; margin-bottom: 10px; font-family: Arial, sans-serif; }
+  .article-card { background: #fffcf5; border: 1px solid #ded2ba; border-top: 5px solid #3e1f14; padding: 30px 36px; }
+  h1 { font-size: 30px; color: #3e1f14; margin-bottom: 5px; font-weight: normal; }
+  .meta-row { font-size: 12.5px; color: #93826d; margin-bottom: 18px; font-family: Arial, sans-serif; }
+  .unesco { display: inline-block; background: #3e5c76; color: #fff; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; padding: 3px 12px; border-radius: 2px; margin-right: 8px; font-family: Arial, sans-serif; }
+  .era { display: inline-block; background: #f0e3c6; color: #7a5b16; border: 1px solid #d9c896; font-size: 11.5px; font-weight: 700; padding: 3px 12px; border-radius: 2px; font-family: Arial, sans-serif; }
+
+  .infobox { float: right; width: 300px; margin: 0 0 16px 26px; background: #f7f0df; border: 1px solid #b98a2f; font-size: 12.5px; font-family: Arial, sans-serif; }
+  .infobox .ib-title { background: #3e1f14; color: #f3e6cf; text-align: center; padding: 9px; font-size: 15px; font-weight: bold; }
+  .infobox .ib-art { background: linear-gradient(170deg, #e8d3a4 0%, #c98a3c 55%, #6e3b1c 100%); height: 150px; position: relative; }
+  .infobox .ib-art svg { position: absolute; inset: 0; margin: auto; }
+  .infobox .ib-caption { font-size: 11px; color: #857253; text-align: center; padding: 5px 8px; background: #fffcf5; border-bottom: 1px solid #e4d5b4; }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox th { text-align: left; padding: 6px 10px; width: 92px; color: #6e3b1c; border-top: 1px solid #e4d5b4; vertical-align: top; font-weight: bold; }
+  .infobox td { padding: 6px 10px; border-top: 1px solid #e4d5b4; }
+
+  .content { font-size: 15px; line-height: 1.68; }
+  .content p { margin-bottom: 12px; text-align: justify; }
+  .lead-first::first-letter { font-size: 200%; font-weight: bold; color: #6e3b1c; }
+
+  h2 { font-size: 20.5px; color: #3e1f14; margin: 24px 0 10px; padding-bottom: 4px; border-bottom: 1px solid #c9b789; font-weight: normal; }
+  .timeline { margin: 12px 0 18px; border-left: 3px solid #b98a2f; padding-left: 18px; }
+  .tl-item { position: relative; margin-bottom: 12px; }
+  .tl-item::before { content: ""; position: absolute; left: -24.5px; top: 6px; width: 10px; height: 10px; background: #b98a2f; border-radius: 50%; }
+  .tl-year { font-family: Arial, sans-serif; font-weight: 800; color: #8a5a12; font-size: 13.5px; }
+  .tl-text { font-size: 13.5px; line-height: 1.55; }
+
+  .site-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; margin-top: 12px; }
+  .scard { background: #f7f0df; border: 1px solid #ded2ba; padding: 14px 16px; }
+  .scard h4 { color: #6e3b1c; font-size: 14.5px; margin-bottom: 4px; }
+  .scard p { font-size: 12.5px; color: #6d5f4c; line-height: 1.5; margin: 0; }
+  .scard .tag { font-family: Arial, sans-serif; font-size: 10.5px; font-weight: 700; color: #3e5c76; letter-spacing: .5px; }
+
+  .panel { background: #fffcf5; border: 1px solid #ded2ba; border-left: 4px solid #b98a2f; margin-bottom: 16px; padding: 13px 15px; }
+  .panel h3 { font-size: 13.5px; color: #3e1f14; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; font-family: Arial, sans-serif; }
+  .panel ul { list-style: none; }
+  .panel li { font-size: 13px; padding: 4.5px 0; border-bottom: 1px dotted #ded2ba; }
+  .panel li:last-child { border-bottom: none; }
+  .quote { border-left: 3px solid #b98a2f; background: #f7f0df; margin: 10px 0 14px; padding: 8px 14px; font-style: italic; color: #57432c; }
+  .cat-footer { clear: both; margin-top: 24px; border: 1px solid #ded2ba; background: #f7f0df; padding: 10px 14px; font-size: 12.5px; font-family: Arial, sans-serif; }
+  .page-footer { text-align: center; font-size: 12px; color: #93826d; padding: 22px 0 30px; font-family: Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Dharohar<span>&nbsp;Archives</span></div>
+  <div class="tagline">Kathmandu Valley Heritage Wiki — 214 monuments documented by 38 volunteer editors</div>
+  <div class="search"><input type="text" placeholder="Search monuments, e.g. Boudhanath..."></div>
+</header>
+<nav class="nav-strip">
+  <a href="#" class="active">Featured Monument</a>
+  <a href="#">UNESCO Zones</a>
+  <a href="#">Durbar Squares</a>
+  <a href="#">Stupas &amp; Chaityas</a>
+  <a href="#">Temples</a>
+  <a href="#">Living Heritage</a>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="panel">
+      <h3>Seven UNESCO Zones</h3>
+      <ul>
+        <li><a href="#">Kathmandu Durbar Square</a></li>
+        <li><a href="#">Patan Durbar Square</a></li>
+        <li><a href="#">Bhaktapur Durbar Square</a></li>
+        <li><a href="#"><b>Pashupatinath</b></a></li>
+        <li><a href="#">Changu Narayan</a></li>
+        <li><a href="#">Swayambhunath</a></li>
+        <li><a href="#">Boudhanath</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Reading Room</h3>
+      <ul>
+        <li><a href="#">Newari architecture primer</a></li>
+        <li><a href="#">Pagoda vs. shikhara style</a></li>
+        <li><a href="#">1934 &amp; 2015 earthquake records</a></li>
+        <li><a href="#">Festival calendar (B.S.)</a></li>
+        <li><a href="#">Conservation glossary</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Archive Status</h3>
+      <ul>
+        <li>Monuments documented: <b>214</b></li>
+        <li>Photo records: <b>5,880</b></li>
+        <li>Oral histories: <b>76</b></li>
+        <li>Adopt-a-monument: <a href="#">join</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="maincol">
+    <div class="breadcrumb">Dharohar Archives &rsaquo; UNESCO Zones &rsaquo; Hindu Temples &rsaquo; <b>Pashupatinath Temple</b></div>
+
+    <div class="article-card">
+      <h1>Pashupatinath Temple</h1>
+      <div class="meta-row"><span class="unesco">UNESCO WORLD HERITAGE — KATHMANDU VALLEY (INSCRIBED 1979)</span><span class="era">PAGODA STYLE</span> &nbsp; Last reviewed 4 days ago by <a href="#">EditorPratima</a></div>
+
+      <aside class="infobox">
+        <div class="ib-title">PASHUPATINATH</div>
+        <div class="ib-art">
+          <svg width="130" height="115" viewBox="0 0 130 115">
+            <rect x="25" y="70" width="80" height="35" fill="#5d3319"/>
+            <path d="M20 70 L65 40 L110 70 Z" fill="#b98a2f"/>
+            <path d="M32 55 L65 32 L98 55 Z" fill="#d9b45c"/>
+            <path d="M65 12 L65 30 M58 19 L72 19" stroke="#f3e6cf" stroke-width="3"/>
+            <rect x="55" y="82" width="20" height="23" fill="#2e1a10"/>
+            <circle cx="65" cy="8" r="4" fill="#f3e6cf"/>
+          </svg>
+        </div>
+        <div class="ib-caption">Editor's drawing: the two-tiered golden roof above the western gate</div>
+        <table>
+          <tr><th>Deity</th><td>Shiva as Pashupatinath ("Lord of Animals")</td></tr>
+          <tr><th>Location</th><td>Bank of the Bagmati River, Deopatan, Kathmandu</td></tr>
+          <tr><th>Style</th><td>Nepali pagoda, two-tiered golden roof</td></tr>
+          <tr><th>UNESCO status</th><td>Inscribed 1979 (Kathmandu Valley group)</td></tr>
+          <tr><th>Managed by</th><td>Pashupatinath Area Development Trust</td></tr>
+          <tr><th>Major festival</th><td>Maha Shivaratri (Feb–Mar)</td></tr>
+        </table>
+      </aside>
+
+      <div class="content">
+        <p class="lead-first"><b>Pashupatinath Temple</b> is the most important Hindu shrine in Nepal and one of the four most sacred temples of Lord Shiva on the subcontinent. Standing on the eastern bank of the holy Bagmati River at Deopatan, just east of central Kathmandu, the temple complex spreads over a walled precinct of shrines, ghats, ashrams and groves, and it draws pilgrims, sadhus and mourners every single day of the year. Non-Hindu visitors may view the main temple from the eastern bank across the river, where a full panorama of the pagoda unfolds above the cremation terraces.</p>
+        <p>The sanctum houses the <b>lingam of Pashupatinath</b> — Shiva worshipped here as the shepherd of all living beings. Only ordained priests enter the inner sanctum, and the four carved silver doors open for specific daily rituals whose bells echo across the riverbank from before dawn until evening.</p>
+
+        <h2>History</h2>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">Ancient era</div><div class="tl-text">A shrine to Shiva on the Bagmati is believed to predate the written records of the valley; legends attribute its origin to a miraculously self-formed lingam discovered by a cowherd's cow.</div></div>
+          <div class="tl-item"><div class="tl-year">Medieval period</div><div class="tl-text">Successive royal dynasties of the Kathmandu Valley rebuilt and expanded the complex; the present two-tiered pagoda form reflects later Newari craftsmanship.</div></div>
+          <div class="tl-item"><div class="tl-year">1979</div><div class="tl-text">Pashupatinath is inscribed — together with the valley's durbar squares, stupas and Changu Narayan — as part of the Kathmandu Valley World Heritage Site.</div></div>
+          <div class="tl-item"><div class="tl-year">Today</div><div class="tl-text">A freely accessible riverside precinct managed by the Pashupatinath Area Development Trust, combining living worship with heritage conservation.</div></div>
+        </div>
+
+        <h2>Architecture</h2>
+        <p>The main temple is a cubical sanctum crowned by a <b>two-tiered roof gilded in gold</b>, rising above four silver-plated doors and gilded doorways carved with guardian figures. Around the compound stand hundreds of smaller shrines, including the rows of <b>Shiva lingams with yoni plinths</b> along the western walkway, the Vasuki Nath and Unmatt Bhairav shrines, and the terraced <b>Arya Ghat</b> where cremation fires burn beside the river. The Bagmati's stone embankments and the nine-arched footbridge upstream form the classic viewing composition that every visitor photographs.</p>
+
+        <h2>Rituals and festivals</h2>
+        <p>Worship follows a fixed daily rhythm of rituals at dawn, midday and dusk, punctuated by the ringing of the great bell. The riverside <b>aarati</b> at Arya Ghat each evening — rows of flame lamps, conch calls and drums facing the water — has become one of Kathmandu's most moving spectacles. On <b>Maha Shivaratri</b>, tens of thousands of devotees and ash-smeared sadhus fill the complex through the night, and during <b>Teej</b> the courtyards fill with women in red celebrating together.</p>
+        <blockquote>"Pashupatinath is where the valley takes both its prayers and its farewells. Life, death and devotion share the same flight of stone steps here."</blockquote>
+
+        <h2>The other six monument zones</h2>
+        <div class="site-grid">
+          <div class="scard"><h4>Boudhanath Stupa</h4><p>One of the largest Buddhist stupas in the world, its gilded harmika eyes watching over a Tibetan quarter of monasteries.</p><span class="tag">STUPA · NORTHEAST KATHMANDU</span></div>
+          <div class="scard"><h4>Swayambhunath</h4><p>The "Self-Arisen" hilltop stupa above the valley — monkeys, prayer wheels and the oldest Buddhist sanctuary here.</p><span class="tag">STUPA · HILLTOP WEST</span></div>
+          <div class="scard"><h4>Kathmandu Durbar Square</h4><p>The Hanuman Dhoka royal palace complex with the Kumari Ghar, home of the living goddess.</p><span class="tag">DURBAR SQUARE · OLD CITY</span></div>
+          <div class="scard"><h4>Patan Durbar Square</h4><p>The finest concentration of Newari court art, facing the Krishna Mandir in stone.</p><span class="tag">DURBAR SQUARE · LALITPUR</span></div>
+          <div class="scard"><h4>Bhaktapur Durbar Square</h4><p>A medieval city of brick and timber: the 55-Window Palace, Nyatapola and Dattatreya squares.</p><span class="tag">DURBAR SQUARE · BHAKTAPUR</span></div>
+          <div class="scard"><h4>Changu Narayan</h4><p>The valley's hilltop Vishnu temple with some of Nepal's oldest dated inscriptions and sculpture.</p><span class="tag">TEMPLE · CHANGU RIDGE</span></div>
+        </div>
+
+        <div class="cat-footer"><b>Categories:</b> <a href="#">Hindu temples</a> | <a href="#">UNESCO World Heritage</a> | <a href="#">Shiva temples</a> | <a href="#">Kathmandu Valley</a> | <a href="#">Living heritage</a></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="page-footer">Dharohar Archives — Kathmandu Valley Heritage Wiki &middot; Respect active worship sites: dress modestly and follow on-site guidance &middot; 2026</footer>
+
+</body>
+</html>

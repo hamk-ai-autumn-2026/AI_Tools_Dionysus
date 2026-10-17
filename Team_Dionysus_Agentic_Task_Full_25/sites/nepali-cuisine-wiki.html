@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Momo - Momo Mandala | The Nepali Food Wiki</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; background: #fbf6ec; color: #3a2c1e; }
+  a { color: #b4501e; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header { background: #7a2e12; color: #fff; display: flex; align-items: center; padding: 12px 30px; gap: 24px; border-bottom: 5px solid #e9a13b; }
+  .logo { font-size: 23px; font-weight: 800; }
+  .logo span { color: #f3c76b; }
+  .tagline { font-size: 12px; color: #e8cfae; }
+  .search { margin-left: auto; }
+  .search input { width: 300px; padding: 8px 12px; border: none; border-radius: 20px; font-size: 13px; }
+  .nav-strip { background: #95431c; padding: 9px 30px; display: flex; gap: 22px; font-size: 13.5px; }
+  .nav-strip a { color: #fbe4c4; font-weight: 600; }
+  .nav-strip a.active { color: #fff; border-bottom: 3px solid #f3c76b; padding-bottom: 3px; }
+
+  .layout { display: flex; max-width: 1260px; margin: 26px auto; gap: 26px; padding: 0 20px; }
+  .sidebar { width: 245px; flex-shrink: 0; }
+  .maincol { flex: 1; }
+
+  .article-card { background: #fff; border: 1px solid #ecdcc3; border-radius: 10px; padding: 28px 34px; box-shadow: 0 2px 6px rgba(122,46,18,.06); }
+  .breadcrumb { font-size: 12.5px; color: #a08a70; margin-bottom: 10px; }
+  h1 { font-size: 31px; color: #7a2e12; margin-bottom: 4px; }
+  .meta-row { font-size: 12.5px; color: #a08a70; margin-bottom: 16px; }
+
+  .infobox { float: right; width: 295px; margin: 0 0 16px 26px; background: #fdf8ee; border: 2px solid #e9a13b; border-radius: 10px; overflow: hidden; font-size: 13px; }
+  .infobox .ib-title { background: #e9a13b; color: #4a2408; text-align: center; padding: 9px; font-weight: 800; font-size: 15px; }
+  .infobox .ib-art { background: linear-gradient(150deg, #fbe0b8, #f6f1e2 60%, #d9e6c8); height: 140px; position: relative; }
+  .infobox .ib-art svg { position: absolute; inset: 0; margin: auto; }
+  .infobox .ib-caption { font-size: 11px; color: #8a7256; text-align: center; padding: 5px 8px; border-bottom: 1px solid #eddfc4; }
+  .infobox table { width: 100%; border-collapse: collapse; }
+  .infobox th { text-align: left; padding: 6px 10px; width: 95px; color: #7a2e12; border-top: 1px solid #eddfc4; vertical-align: top; }
+  .infobox td { padding: 6px 10px; border-top: 1px solid #eddfc4; }
+
+  .content { font-size: 14.5px; line-height: 1.7; }
+  .content p { margin-bottom: 12px; text-align: justify; }
+  .lead-first::first-letter { font-size: 200%; font-weight: 800; color: #b4501e; }
+
+  h2 { font-size: 20px; color: #7a2e12; margin: 24px 0 10px; padding-bottom: 4px; border-bottom: 2px dashed #e9c99a; }
+  .variety-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0 16px; }
+  .vcard { background: #fdf8ee; border: 1px solid #ecdcc3; border-radius: 8px; padding: 12px 14px; }
+  .vcard h4 { color: #b4501e; font-size: 14px; margin-bottom: 4px; }
+  .vcard p { font-size: 12px; color: #6d5a44; line-height: 1.5; margin: 0; }
+
+  table.dish { width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 16px; }
+  table.dish th { background: #7a2e12; color: #fff; padding: 7px 12px; text-align: left; }
+  table.dish td { border-bottom: 1px solid #eddfc4; padding: 7px 12px; }
+  table.dish tr:nth-child(even) td { background: #fdf8ee; }
+
+  .panel { background: #fff; border: 1px solid #ecdcc3; border-radius: 10px; margin-bottom: 16px; padding: 14px 16px; }
+  .panel h3 { font-size: 14px; color: #7a2e12; text-transform: uppercase; letter-spacing: .4px; margin-bottom: 8px; }
+  .panel ul { list-style: none; }
+  .panel li { font-size: 13px; padding: 5px 0; border-bottom: 1px dashed #eddfc4; }
+  .panel li:last-child { border-bottom: none; }
+  .panel .kcal { float: right; color: #b4501e; font-weight: 700; }
+
+  .step { display: flex; gap: 12px; margin-bottom: 10px; }
+  .stepnum { flex-shrink: 0; width: 28px; height: 28px; background: #e9a13b; color: #4a2408; border-radius: 50%; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .steptext { font-size: 13.5px; line-height: 1.55; padding-top: 4px; }
+
+  .cat-footer { clear: both; margin-top: 22px; border: 1px solid #ecdcc3; background: #fdf8ee; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; }
+  .page-footer { text-align: center; font-size: 12px; color: #a08a70; padding: 22px 0 30px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Momo<span>Mandala</span></div>
+  <div class="tagline">The Nepali Food Wiki — 1,930 dishes · 212 eateries mapped · 41 editors</div>
+  <div class="search"><input type="text" placeholder="Search a dish, e.g. sel roti..."></div>
+</header>
+<nav class="nav-strip">
+  <a href="#" class="active">Dish of the Week</a>
+  <a href="#">Dishes A–Z</a>
+  <a href="#">Newari Kitchen</a>
+  <a href="#">Street Food Map</a>
+  <a href="#">Festival Foods</a>
+  <a href="#">Recipes</a>
+</nav>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="panel">
+      <h3>Beloved Classics</h3>
+      <ul>
+        <li><a href="#"><b>Momo</b></a><span class="kcal">~45/pc</span></li>
+        <li><a href="#">Dal Bhat Tarkari</a><span class="kcal">~540</span></li>
+        <li><a href="#">Newari Khaja Set</a><span class="kcal">~610</span></li>
+        <li><a href="#">Sel Roti</a><span class="kcal">~120/pc</span></li>
+        <li><a href="#">Thukpa</a><span class="kcal">~430</span></li>
+        <li><a href="#">Yomari</a><span class="kcal">~180/pc</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>By Course</h3>
+      <ul>
+        <li><a href="#">Snacks &amp; street food</a></li>
+        <li><a href="#">Main meals</a></li>
+        <li><a href="#">Sweets</a></li>
+        <li><a href="#">Drinks — chiya to chyang</a></li>
+        <li><a href="#">Pickles (achar)</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Dish of the Week Poll</h3>
+      <ul>
+        <li>Jhol momo — <b>38%</b></li>
+        <li>Chatamari — <b>27%</b></li>
+        <li>Gundruk — <b>19%</b></li>
+        <li>Juju dhau — <b>16%</b></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="maincol">
+    <div class="breadcrumb">MomoMandala &rsaquo; Dishes &rsaquo; Dumplings &rsaquo; <b>Momo</b></div>
+    <div class="article-card">
+      <h1>Momo</h1>
+      <div class="meta-row">Dish of the Week — chosen by 1,204 community votes &middot; Last edited yesterday by <a href="#">ChefKaji</a></div>
+
+      <aside class="infobox">
+        <div class="ib-title">MOMO</div>
+        <div class="ib-art">
+          <svg width="150" height="105" viewBox="0 0 150 105">
+            <ellipse cx="75" cy="78" rx="58" ry="18" fill="#e8d9bd"/>
+            <path d="M45 74 q-14 -34 12 -44 q-4 -12 18 -14 q22 2 18 14 q26 10 12 44 Z" fill="#fffdf6" stroke="#d9c49a" stroke-width="2"/>
+            <path d="M68 18 q7 -8 14 0 q-7 6 -14 0" fill="#f3d9a4"/>
+            <path d="M52 50 q10 8 23 8 q13 0 23 -8" stroke="#e3cba0" stroke-width="2" fill="none"/>
+            <circle cx="30" cy="88" r="7" fill="#c94f2a"/>
+            <circle cx="120" cy="90" r="6" fill="#7fa653"/>
+            <circle cx="112" cy="84" r="5" fill="#d9822b"/>
+          </svg>
+        </div>
+        <div class="ib-caption">Editor's illustration: a three-fold steamed buff momo on the classic steel plate</div>
+        <table>
+          <tr><th>Type</th><td>Dumpling</td></tr>
+          <tr><th>Course</th><td>Snack or main</td></tr>
+          <tr><th>Place of origin</th><td>Himalayan region; popularised across Nepal</td></tr>
+          <tr><th>Serving temp.</th><td>Hot, straight off the steamer</td></tr>
+          <tr><th>Accompaniment</th><td>Achar (tomato-sesame or timur chutney)</td></tr>
+          <tr><th>Cookbook</th><td><a href="#">Momo recipes on this wiki</a></td></tr>
+        </table>
+      </aside>
+
+      <div class="content">
+        <p class="lead-first"><b>Momo</b> — in Nepali script written as a short two-syllable word — is Nepal's best-loved dumpling: a thin flour wrapper pinched around a spiced filling and cooked in a tiered steamer. Sold from school-gate carts, bus-park stalls and family kitchens alike, momo has crossed every boundary of region, class and occasion — it is at once the cheapest hot lunch in Kathmandu and the dish every Nepali living abroad learns to cook first. A typical order arrives as ten pieces on a steel plate, ringed by a fiery tomato achar, and disappears within minutes.</p>
+
+        <h2>Origins</h2>
+        <p>Food historians generally trace the dumpling to Himalayan trade routes that connected Tibet with the Kathmandu Valley, and related versions of the dish are found across Tibet, Ladakh, Bhutan and Darjeeling. What is distinctly Nepali is how thoroughly momo was adopted and reinvented — local spice profiles (timur pepper, jimbu, fresh coriander), local fillings from buffalo to bamboo shoots, and an entire street culture of steaming carts and late-night "momo houses".</p>
+
+        <h2>Fillings and varieties</h2>
+        <div class="variety-grid">
+          <div class="vcard"><h4>Buff Momo</h4><p>Minced buffalo meat with onion, garlic and timur — the classic Kathmandu street order.</p></div>
+          <div class="vcard"><h4>Chicken Momo</h4><p>The safest crowd-pleaser; often finished with a brushing of clarified butter.</p></div>
+          <div class="vcard"><h4>Veg &amp; Cheese Momo</h4><p>Cabbage-carrot, or paneer/chhurpi fillings popular during festivals and fasting months.</p></div>
+          <div class="vcard"><h4>Jhol Momo</h4><p>Momo drowned in a thin, spicy "jhol" achar soup — the default order for locals.</p></div>
+          <div class="vcard"><h4>Fried &amp; Chilli Momo</h4><p>Steamed-then-fried, or tossed with peppers in "C-momo" / chilly momo style.</p></div>
+          <div class="vcard"><h4>Open Momo (Shabalay)</h4><p>Pleated-open cousin from the high Himalaya, closer to the Tibetan original.</p></div>
+        </div>
+
+        <h2>How a momo house works</h2>
+        <div class="step"><div class="stepnum">1</div><div class="steptext"><b>Order &amp; wait.</b> Ten-piece plates are steamed to order; the wrapper must stay tender, so batches never sit long.</div></div>
+        <div class="step"><div class="stepnum">2</div><div class="steptext"><b>The achar test.</b> Regulars judge a stall by its tomato-sesame achar; a good one balances heat, timur numbness and a sour edge.</div></div>
+        <div class="step"><div class="stepnum">3</div><div class="steptext"><b>One-bite rule.</b> Nibble a corner, sip the broth inside, then finish — burning your tongue on the first momo is a rite of passage.</div></div>
+
+        <h2>Momo and friends — the wider Nepali table</h2>
+        <table class="dish">
+          <tr><th>Dish</th><th>What it is</th><th>When Nepalis eat it</th></tr>
+          <tr><td>Dal Bhat Tarkari</td><td>Lentil soup, rice and seasonal curries — the daily staple</td><td>Twice a day, everywhere</td></tr>
+          <tr><td>Newari Khaja</td><td>Samay Baji set: beaten rice, smoked meat, bara, achar</td><td>Festivals &amp; gatherings</td></tr>
+          <tr><td>Sel Roti</td><td>Sweet ring-shaped rice bread, deep-fried</td><td>Tihar, Dashain, weddings</td></tr>
+          <tr><td>Yomari</td><td>Steamed rice-flour dumpling with chaku (molasses)</td><td>Yomari Punhi</td></tr>
+          <tr><td>Gundruk</td><td>Fermented leafy greens, sour and savoury</td><td>Winter curries &amp; achar</td></tr>
+          <tr><td>Juju Dhau</td><td>"King curd" — thick caramel-sweet yogurt from Bhaktapur</td><td>Dessert, always</td></tr>
+        </table>
+
+        <div class="cat-footer"><b>Categories:</b> <a href="#">Dumplings</a> | <a href="#">Street food</a> | <a href="#">Nepali cuisine</a> | <a href="#">Steamed foods</a> | <a href="#">Kathmandu classics</a></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="page-footer">MomoMandala — The Nepali Food Wiki &middot; Nutrition values are community estimates &middot; Eat hot, stay kind to the achar.</footer>
+
+</body>
+</html>

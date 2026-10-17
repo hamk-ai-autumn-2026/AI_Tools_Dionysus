@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Everest Base Camp Trek - HimalRoute | Himalaya Trekking Routes Guide</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f2f5f3; color: #22312b; }
+  a { color: #146b52; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header { background: #0e3b2e; color: #fff; display: flex; align-items: center; padding: 12px 30px; gap: 26px; }
+  .logo { font-size: 22px; font-weight: 800; letter-spacing: .3px; }
+  .logo span { color: #7fd6b8; }
+  .tagline { font-size: 12px; color: #a8c8ba; }
+  .search { margin-left: auto; display: flex; }
+  .search input { width: 300px; padding: 8px 12px; border: none; border-radius: 4px 0 0 4px; font-size: 13px; }
+  .search button { padding: 8px 16px; border: none; background: #e9a13b; color: #0e3b2e; font-weight: 700; border-radius: 0 4px 4px 0; cursor: pointer; }
+  .nav-strip { background: #14513f; padding: 9px 30px; display: flex; gap: 24px; font-size: 13.5px; }
+  .nav-strip a { color: #cfe6db; font-weight: 600; }
+  .nav-strip a.active { color: #fff; border-bottom: 3px solid #e9a13b; padding-bottom: 3px; }
+
+  .hero { background: linear-gradient(180deg, #bcd6e8 0%, #dcebf3 70%, #f2f5f3 100%); border-bottom: 1px solid #d5e2dc; overflow: hidden; }
+  .hero svg { display: block; width: 100%; height: 150px; }
+
+  .layout { display: flex; max-width: 1260px; margin: 26px auto; gap: 26px; padding: 0 20px; }
+  .maincol { flex: 1; }
+  .sidebar { width: 250px; flex-shrink: 0; }
+
+  .breadcrumb { font-size: 12.5px; color: #7a8a83; margin-bottom: 10px; }
+  .article-card { background: #fff; border: 1px solid #dde6e1; border-radius: 8px; padding: 28px 34px; }
+  h1 { font-size: 29px; color: #0e3b2e; margin-bottom: 6px; }
+  .meta-row { font-size: 12.5px; color: #7a8a83; margin-bottom: 18px; }
+  .badge { display: inline-block; background: #fdf3e3; color: #a36a12; border: 1px solid #eed9b4; font-size: 11.5px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-right: 8px; }
+  .lead { font-size: 15.5px; line-height: 1.7; margin-bottom: 14px; text-align: justify; }
+  p.body-text { font-size: 14.5px; line-height: 1.7; margin-bottom: 12px; text-align: justify; }
+
+  .fact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 22px; }
+  .fact { background: #eef6f1; border: 1px solid #cfe3d7; border-radius: 8px; padding: 12px 14px; }
+  .fact .num { font-size: 21px; font-weight: 800; color: #0e3b2e; }
+  .fact .lbl { font-size: 11.5px; color: #5c6f66; margin-top: 2px; }
+
+  h2 { font-size: 20px; color: #0e3b2e; margin: 24px 0 10px; padding-left: 10px; border-left: 4px solid #e9a13b; }
+  table.itin { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 8px 0 16px; }
+  table.itin th { background: #0e3b2e; color: #fff; padding: 8px 12px; text-align: left; }
+  table.itin td { border-bottom: 1px solid #e2eae5; padding: 8px 12px; }
+  table.itin tr:nth-child(even) td { background: #f6faf8; }
+
+  .route-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 10px; }
+  .rcard { background: #fff; border: 1px solid #dde6e1; border-radius: 8px; padding: 16px 18px; }
+  .rcard h4 { font-size: 15px; color: #0e3b2e; margin-bottom: 5px; }
+  .rcard p { font-size: 12.5px; color: #5c6f66; line-height: 1.55; }
+  .rcard .chip { font-size: 11px; font-weight: 700; color: #146b52; background: #e6f3ec; border-radius: 12px; padding: 2px 9px; display: inline-block; margin-top: 8px; }
+
+  .panel { background: #fff; border: 1px solid #dde6e1; border-radius: 8px; margin-bottom: 16px; padding: 14px 16px; }
+  .panel h3 { font-size: 14px; color: #0e3b2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .4px; }
+  .panel ul { list-style: none; }
+  .panel li { font-size: 13px; padding: 5px 0; border-bottom: 1px dashed #e2eae5; }
+  .panel li:last-child { border-bottom: none; }
+  .alert { background: #fdf3e3; border: 1px solid #eed9b4; border-radius: 8px; padding: 12px 14px; font-size: 13px; color: #7a5518; margin-bottom: 16px; line-height: 1.55; }
+  .page-footer { text-align: center; font-size: 12px; color: #7a8a83; padding: 22px 0 30px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Himal<span>Route</span></div>
+  <div class="tagline">Himalaya Trekking Routes Guide — 62 route guides · 14,300 trekkers helped monthly</div>
+  <div class="search">
+    <input type="text" placeholder="Search a route, e.g. Annapurna...">
+    <button>Search</button>
+  </div>
+</header>
+<nav class="nav-strip">
+  <a href="#" class="active">Route Guides</a>
+  <a href="#">Everest Region</a>
+  <a href="#">Annapurna Region</a>
+  <a href="#">Langtang &amp; Helambu</a>
+  <a href="#">Permits &amp; Rules</a>
+  <a href="#">Season Calendar</a>
+</nav>
+
+<div class="hero">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path d="M0 150 L0 90 L180 30 L320 95 L470 15 L640 100 L800 40 L980 105 L1140 25 L1320 90 L1440 55 L1440 150 Z" fill="#8fb4c9" opacity="0.85"/>
+    <path d="M180 30 L230 50 L200 52 Z M470 15 L530 42 L490 46 Z M1140 25 L1195 48 L1155 52 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M0 150 L0 118 L260 70 L480 125 L720 78 L980 130 L1220 85 L1440 115 L1440 150 Z" fill="#5e8ba3"/>
+    <path d="M0 150 L0 138 L300 108 L620 142 L900 112 L1200 140 L1440 122 L1440 150 Z" fill="#2f5d75"/>
+  </svg>
+</div>
+
+<div class="layout">
+  <main class="maincol">
+    <div class="breadcrumb">HimalRoute &rsaquo; Route Guides &rsaquo; Everest Region &rsaquo; <b>Everest Base Camp Trek</b></div>
+
+    <div class="article-card">
+      <h1>Everest Base Camp Trek</h1>
+      <div class="meta-row">
+        <span class="badge">FLAGSHIP ROUTE</span>
+        <span class="badge">TEA-HOUSE TREK</span>
+        Guide updated 3 days ago &middot; Reviewed by the HimalRoute editor team
+      </div>
+
+      <p class="lead">The <b>Everest Base Camp (EBC) trek</b> is the classic Khumbu Valley journey to the foot of the world's highest mountain. Starting with the famous mountain landing at <b>Lukla</b>, the trail climbs through Sherpa villages, pine forest and high alpine valleys to <b>Everest Base Camp at 5,364 m</b>, with most itineraries adding the sunrise viewpoint of <b>Kala Patthar (5,545 m)</b> for the best close-up panorama of Everest, Nuptse and the Khumbu Glacier.</p>
+
+      <div class="fact-grid">
+        <div class="fact"><div class="num">5,364 m</div><div class="lbl">Base Camp altitude</div></div>
+        <div class="fact"><div class="num">12–14 days</div><div class="lbl">Typical duration (KTM return)</div></div>
+        <div class="fact"><div class="num">5,545 m</div><div class="lbl">Kala Patthar viewpoint</div></div>
+        <div class="fact"><div class="num">Challenging</div><div class="lbl">Difficulty grade</div></div>
+      </div>
+
+      <p class="body-text">The route follows the Dudh Koshi river through Phakding to <b>Namche Bazaar (3,440 m)</b>, the Sherpa "capital" of Khumbu, where almost every itinerary includes an acclimatisation day. Beyond Namche the trail passes the monastery town of <b>Tengboche</b>, the yak pastures of Dingboche and the memorial chortens above Lobuche before reaching Gorak Shep, the last settlement, from which both Base Camp and Kala Patthar are walked as day trips.</p>
+
+      <h2>Standard itinerary (13 days)</h2>
+      <table class="itin">
+        <tr><th>Day</th><th>Stage</th><th>Approx. altitude</th></tr>
+        <tr><td>1</td><td>Kathmandu – flight to Lukla – trek to Phakding</td><td>2,860 m → 2,610 m</td></tr>
+        <tr><td>2</td><td>Phakding – Namche Bazaar (cross five suspension bridges)</td><td>3,440 m</td></tr>
+        <tr><td>3</td><td>Namche acclimatisation day (hike to Everest View Hotel)</td><td>3,440 – 3,880 m</td></tr>
+        <tr><td>4</td><td>Namche – Tengboche Monastery</td><td>3,860 m</td></tr>
+        <tr><td>5</td><td>Tengboche – Dingboche</td><td>4,410 m</td></tr>
+        <tr><td>6</td><td>Dingboche second acclimatisation day (Nangkartshang Peak)</td><td>4,410 – 5,083 m</td></tr>
+        <tr><td>7</td><td>Dingboche – Lobuche</td><td>4,940 m</td></tr>
+        <tr><td>8</td><td>Lobuche – Gorak Shep – Everest Base Camp</td><td>5,170 m / 5,364 m</td></tr>
+        <tr><td>9</td><td>Kala Patthar sunrise – descend to Pheriche</td><td>5,545 m → 4,270 m</td></tr>
+        <tr><td>10–12</td><td>Retrace the valley via Namche to Lukla</td><td>descent days</td></tr>
+        <tr><td>13</td><td>Flight Lukla – Kathmandu (or Ramechhap)</td><td>1,400 m</td></tr>
+      </table>
+
+      <h2>Permits you need</h2>
+      <p class="body-text">Trekkers in the Khumbu need a <b>Sagarmatha National Park entry permit</b>, the <b>Khumbu Pasang Lhamu Rural Municipality fee</b> (collected at Lukla or Monjo), and a <b>TIMS (Trekkers' Information Management System) card</b>. There is no separate "Everest permit"; costs are paid in Nepali rupees at official counters in Kathmandu or at the trailhead checkpoints, and passports are stamped along the way.</p>
+
+      <h2>Altitude and safety</h2>
+      <p class="body-text">The single most important rule of EBC is to <b>gain altitude slowly</b>: the itinerary above builds in two acclimatisation days precisely because rapid ascent is the main cause of Acute Mountain Sickness (AMS). Drink 3–4 litres of water daily, ascend no more than ~500 m of sleeping altitude per day above 3,000 m, and never ignore symptoms such as persistent headache, nausea or unusual fatigue. Travel insurance covering high-altitude helicopter evacuation is strongly recommended.</p>
+    </div>
+
+    <h2 style="margin-top:26px;">More routes on HimalRoute</h2>
+    <div class="route-cards">
+      <div class="rcard">
+        <h4>Annapurna Circuit</h4>
+        <p>The 160–230 km classic around the Annapurna massif, crossing Thorong La (5,416 m) and dipping into the arid Mustang-side valleys.</p>
+        <span class="chip">15–20 days · Moderate–Challenging</span>
+      </div>
+      <div class="rcard">
+        <h4>Langtang Valley</h4>
+        <p>The "valley of glaciers" closest to Kathmandu — a week-long tea-house trek through Langtang National Park to Kyanjin Gompa (3,870 m).</p>
+        <span class="chip">7–10 days · Moderate</span>
+      </div>
+      <div class="rcard">
+        <h4>Ghorepani – Poon Hill</h4>
+        <p>The best short trek in Nepal: rhododendron forests and the famous Poon Hill (3,210 m) sunrise over Dhaulagiri and the Annapurnas.</p>
+        <span class="chip">4–5 days · Easy–Moderate</span>
+      </div>
+      <div class="rcard">
+        <h4>Manaslu Circuit</h4>
+        <p>A restricted-area trek around the eighth-highest mountain, crossing the wild Larkya La (5,106 m) — quieter alternative to Annapurna.</p>
+        <span class="chip">14 days · Challenging · Guide required</span>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="alert"><b>Season alert:</b> October–November and March–May offer the clearest weather. Winter crossings of high passes require extra preparation; monsoon trails are slippery and leech-prone below 3,000 m.</div>
+    <div class="panel">
+      <h3>Popular Routes</h3>
+      <ul>
+        <li><a href="#"><b>Everest Base Camp</b></a></li>
+        <li><a href="#">Annapurna Circuit</a></li>
+        <li><a href="#">Langtang Valley</a></li>
+        <li><a href="#">Ghorepani Poon Hill</a></li>
+        <li><a href="#">Manaslu Circuit</a></li>
+        <li><a href="#">Upper Mustang</a></li>
+        <li><a href="#">Gokyo Lakes</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Checklists</h3>
+      <ul>
+        <li><a href="#">Packing list (all seasons)</a></li>
+        <li><a href="#">Permit price table</a></li>
+        <li><a href="#">AMS symptom chart</a></li>
+        <li><a href="#">Tea-house menu guide</a></li>
+        <li><a href="#">Travel insurance notes</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>This Season</h3>
+      <ul>
+        <li>Route conditions: <b>Normal</b></li>
+        <li>Lukla flights: <b>Operating</b></li>
+        <li>Trail registered trekkers (Oct): <b>9,847</b></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="page-footer">HimalRoute — Himalaya Trekking Routes Guide &middot; Conditions change: always confirm locally before setting out &middot; Updated October 2026</footer>
+
+</body>
+</html>
